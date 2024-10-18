@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nutricionista - Saúde Personalizada</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Usando icones do Font Awesome atualizado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Seu Logo Aqui</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#contato" class="btn-agende">Agende sua consulta</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Banner Principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Nutrição Personalizada para o Seu Bem-Estar</h2>
+            <p>Alcance seus objetivos com um plano nutricional exclusivo.</p>
+            <a href="#contato" class="btn-primary">Marcar Consulta</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre o Nutricionista -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <h2>Sobre o Nutricionista</h2>
+                <p>Com vasta experiência em planos nutricionais personalizados, meu objetivo é ajudar você a atingir suas metas de saúde de forma equilibrada e sustentável.</p>
+                <img src="./img/nutri.png" alt="Nutricionista">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços com Ícones -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Consultoria Nutricional</h3>
+                    <p>Planejamento alimentar individualizado.</p>
+                </div>
+                <div class="servico-item">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Reeducação Alimentar</h3>
+                    <p>Transforme seus hábitos alimentares.</p>
+                </div>
+                <div class="servico-item">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Planos Alimentares</h3>
+                    <p>Alimentação para todas as fases da vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos com Fotos -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2>Depoimentos</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-item">
+                    <img src="https://via.placeholder.com/100" alt="Maria Clara">
+                    <p>"Com a ajuda da Nutricionista, consegui alcançar meu objetivo de uma alimentação mais saudável e equilibrada!"</p>
+                    <h3>- Maria Clara</h3>
+                </div>
+                <div class="depoimento-item">
+                    <img src="https://via.placeholder.com/100" alt="João Paulo">
+                    <p>"Recomendo a todos que buscam melhorar sua saúde e alcançar suas metas!"</p>
+                    <h3>- João Paulo</h3>
+                </div>
+                <div class="depoimento-item">
+                    <img src="https://via.placeholder.com/100" alt="Ana Souza">
+                    <p>"Um plano alimentar que realmente me ajudou a mudar meus hábitos de vida!"</p>
+                    <h3>- Ana Souza</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Vídeos do YouTube -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2>Assista aos nossos vídeos</h2>
+            <div class="video-carousel">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/example" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <input type="tel" name="telefone" placeholder="Seu Telefone" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Botão WhatsApp no rodapé fixo com efeito bounce -->
+    <a href="https://wa.me/seunumero" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Rodapé com ícones de redes sociais -->
+    <footer>
+        <div class="container">
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+/* Variáveis de cor */
+:root {
+    --primary-color: #27ae60;
+    --primary-color-hover: #2ecc71;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --light-gray: #f4f4f9;
+    --whatsapp-color: #25d366;
+    --whatsapp-hover: #34e77a;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-left: 5px; /* Espaçamento de 5px para a esquerda */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.menu li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-agende {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-agende:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('./img/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.btn-primary, .btn-submit {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-primary:hover, .btn-submit:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* Seção Sobre o Nutricionista */
+.sobre {
+    padding: 80px 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre .sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.sobre img {
+    width: 400px; /* Tamanho da imagem ajustado */
+    border-radius: 15px;
+    margin-top: 25px; /* Adiciona 25px de margem ao topo para descer a imagem */
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.sobre .sobre-text {
+    flex: 1;
+}
+
+/* Remove espaço extra abaixo da imagem */
+.sobre img {
+    display: block;
+    margin: 0;
+}
+
+/* Seção Serviços com divs em linha */
+.servicos {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.servicos-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.servico-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1; /* Flexível para ajustar o tamanho de cada div */
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+}
+
+.servico-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.servico-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servico-item p {
+    color: #7f8c8d;
+}
+
+/* Seção Depoimentos */
+.depoimentos {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.depoimentos h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.depoimento-item {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.depoimento-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.depoimento-item p {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.depoimento-item h3 {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+/* Carrossel de Vídeos */
+.video-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 20px 0;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contato input[type="tel"] {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Botões */
+.btn {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* WhatsApp Fixo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--whatsapp-color);
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: var(--whatsapp-hover);
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+
+/* Rodapé com ícones de redes sociais */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.social li a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .btn-agende {
+        display: block;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre img {
+        width: 100%;
+    }
+
+    .servicos-grid {
+        flex-direction: column;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-carousel {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-left: 5px; /* Espaçamento de 5px para a esquerda */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.menu li a:hover {
+    color: #27ae60;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-agende {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-agende:hover {
+    background-color: #2ecc71;
+}
+
+/* Menu hambúrguer */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('./img/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Adiciona um overlay escuro para melhor contraste */
+    z-index: 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobre img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.sobre h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .btn-agende {
+        display: none;
+    }
+}
